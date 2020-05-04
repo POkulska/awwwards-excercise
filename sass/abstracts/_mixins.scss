@@ -1,0 +1,12 @@
+@mixin icon {
+    width:$dimension-icon;
+    height:$dimension-icon;
+    padding:2px ;
+    cursor: pointer;
+
+
+    &:hover {
+        //TODO:do the nice hover effect
+        background-color:blue;
+    }
+}

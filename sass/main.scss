@@ -1,0 +1,158 @@
+// @import "abstracts/variables";
+// @import "abstracts/mixins";
+// @import "base/base";
+// @import "components/card";
+// // @import "components/navigation";
+// @import "base/typography";
+// @import "components/submit--button";
+// @import "layout/header";
+// @import "pages/home";
+
+
+
+.header-main {
+    .menu-navigation {
+        .icon-svg {
+
+        }
+
+        &__name {
+
+        }
+    }
+
+    .search {
+        .icon-svg {
+
+        }
+    }
+
+    .logo {
+        .icon-svg {
+
+        }
+    }
+
+    .register {
+        &__feature {
+
+        }
+    }
+
+    .submit {
+        button-narrow {
+            //TODO:import here button
+        }
+        span {
+            //TODO:typography
+        }
+    }
+}
+
+.content {
+    .block {
+        .inner {
+            //TODO:put these in  layout
+        }
+    }
+
+    .box-main-heading {
+        .heading-primary {
+            //TODO:typography
+        }
+        .heading-secondary {
+            //TODO:typography
+        }
+    }
+
+    .grid {
+                    //TODO:put these in  layout gisplay flex
+        .col3 {
+                                //TODO:put these in  layout
+        }
+    }
+
+    .subscription {
+        &-option {
+            .data {
+
+                .name {
+
+                }
+                .where {
+
+                }
+                .amount {
+
+                }
+                .currency {
+
+                }
+            }
+            .button-wide {
+                //add in components
+            }
+        }
+        &-quote {
+            //give class to h4 
+            //giv class to h5
+            .text-bold {
+
+            }
+            
+        }
+    }
+
+    .box-gallery {
+        .item {
+            figure {
+
+            }
+            .footer {
+
+            }
+            //todo:hover effect animation
+        }
+    }
+}
+
+#footer {
+    .box-top {
+        .box-left {
+            //h2 heading fix class and to typography
+            .menu-footer {
+                li {
+
+                }
+            }
+            .follow {
+                a {
+
+                }
+            }
+        }
+        .box-right {
+            .headline {
+                //svg ico ?? fix
+            }
+        }
+
+    }
+    .box-bottom {
+        .box-left {
+            .menu-footer {
+                li {
+
+                }
+            }
+        }
+        .box-right {
+            p {
+                
+            }
+        }
+    }
+}
+
+
+

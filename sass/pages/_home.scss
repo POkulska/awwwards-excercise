@@ -1,0 +1,17 @@
+
+.subscription {
+    background-color: $color-grey-light;
+    padding: 110px 50px 50px 50px;
+
+    &__heading--1 {
+        padding-bottom:25px;
+    }
+    &__paragraph {
+        padding: 0 150px 50px;
+    }
+
+    &__options {
+        display:flex;
+    }
+
+}
