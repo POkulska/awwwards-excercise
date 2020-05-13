@@ -1,0 +1,14 @@
+.button {
+    //TODO:insert it to button as a component and make a proper hover effect
+    background-color: #47BFB0;
+    padding: 5px 20px;
+    transition: all ease .1s;
+
+    &:hover {
+        background-color: #42AB9E;
+    }
+
+    // button-narrow {
+    //     //TODO:modify button if needed
+    // }
+}

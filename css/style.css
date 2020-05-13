@@ -1,0 +1,101 @@
+body {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  color: #202121; }
+
+header {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center; }
+  header .navigation__menu {
+    font-weight: 400; }
+
+.heading--primary {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 700; }
+
+.heading--secondary {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400; }
+
+.heading--tertiary {
+  text-align: center;
+  text-transform: uppercase;
+  text-transform: none;
+  font-weight: 300; }
+
+.paragraph {
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.5; }
+
+a {
+  text-decoration: none; }
+  a:active, a:visited, a:link {
+    text-decoration: none; }
+
+.button {
+  background-color: #47BFB0;
+  padding: 5px 20px;
+  transition: all ease .1s; }
+  .button:hover {
+    background-color: #42AB9E; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0; }
+
+.header-main {
+  display: flex;
+  background-color: #F4F7F6; }
+  .header-main .menu-navigation {
+    flex-basis: 5%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+    .header-main .menu-navigation .icon-svg {
+      max-width: 20px;
+      padding: 5px; }
+      .header-main .menu-navigation .icon-svg:hover {
+        cursor: pointer; }
+    .header-main .menu-navigation__name {
+      padding: 5px 10px; }
+  .header-main .search {
+    min-width: auto;
+    flex-basis: 3%;
+    flex-grow: 0;
+    display: flex; }
+    .header-main .search .icon-svg {
+      max-width: 20px; }
+  .header-main .logo {
+    flex-grow: 1;
+    position: relative; }
+    .header-main .logo .icon-svg {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+  .header-main .register {
+    padding: 0 20px;
+    flex-basis: 7%;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .header-main .submit {
+    flex-basis: 7%;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #47BFB0; }

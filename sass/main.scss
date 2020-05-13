@@ -1,52 +1,88 @@
-// @import "abstracts/variables";
+ @import "abstracts/variables";
 // @import "abstracts/mixins";
 // @import "base/base";
 // @import "components/card";
 // // @import "components/navigation";
-// @import "base/typography";
-// @import "components/submit--button";
+ @import "base/typography";
+ @import "components/button";
 // @import "layout/header";
 // @import "pages/home";
 
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
 
 .header-main {
+    display: flex;
+    background-color: #F4F7F6;
+
     .menu-navigation {
+        flex-basis: 5%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         .icon-svg {
+            max-width: 20px;
+            //TODO: insert icon mixin
+            padding: 5px;
 
+            &:hover {
+                cursor: pointer;
+            }
         }
-
         &__name {
-
+            padding: 5px 10px;
         }
     }
 
     .search {
-        .icon-svg {
+        min-width: auto;
+        flex-basis: 3%;
+        flex-grow: 0;
+        display: flex;
 
+        .icon-svg {
+            max-width: 20px;
         }
     }
 
     .logo {
+        flex-grow: 1;
+        position: relative;
         .icon-svg {
-
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 
     .register {
-        &__feature {
-
-        }
+        padding: 0 20px;
+        flex-basis: 7%;
+        justify-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__feature {}
     }
 
     .submit {
-        button-narrow {
-            //TODO:import here button
-        }
-        span {
-            //TODO:typography
-        }
+        flex-basis: 7%;
+        justify-self: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #47BFB0;
+        //TODO: insert button here as a component as a second class i used
     }
+
 }
 
 .content {
@@ -60,15 +96,17 @@
         .heading-primary {
             //TODO:typography
         }
+
         .heading-secondary {
             //TODO:typography
         }
     }
 
     .grid {
-                    //TODO:put these in  layout gisplay flex
+
+        //TODO:put these in  layout gisplay flex
         .col3 {
-                                //TODO:put these in  layout
+            //TODO:put these in  layout
         }
     }
 
@@ -76,41 +114,35 @@
         &-option {
             .data {
 
-                .name {
+                .name {}
 
-                }
-                .where {
+                .where {}
 
-                }
-                .amount {
+                .amount {}
 
-                }
-                .currency {
-
-                }
+                .currency {}
             }
+
             .button-wide {
                 //add in components
             }
         }
+
         &-quote {
+
             //give class to h4 
             //giv class to h5
-            .text-bold {
+            .text-bold {}
 
-            }
-            
         }
     }
 
     .box-gallery {
         .item {
-            figure {
+            figure {}
 
-            }
-            .footer {
+            .footer {}
 
-            }
             //todo:hover effect animation
         }
     }
@@ -119,18 +151,17 @@
 #footer {
     .box-top {
         .box-left {
+
             //h2 heading fix class and to typography
             .menu-footer {
-                li {
-
-                }
+                li {}
             }
-            .follow {
-                a {
 
-                }
+            .follow {
+                a {}
             }
         }
+
         .box-right {
             .headline {
                 //svg ico ?? fix
@@ -138,21 +169,16 @@
         }
 
     }
+
     .box-bottom {
         .box-left {
             .menu-footer {
-                li {
-
-                }
+                li {}
             }
         }
+
         .box-right {
-            p {
-                
-            }
+            p {}
         }
     }
 }
-
-
-
