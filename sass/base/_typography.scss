@@ -14,7 +14,7 @@ header {
     }
 }
 
-.heading--primary {
+.heading-primary {
     //@extend: inherit;
     text-align: center;
     text-transform: uppercase;
@@ -22,15 +22,16 @@ header {
     font-weight: 700;
 }
 
-.heading--secondary {
+.heading-secondary {
     text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
     font-size: 16px;
     font-weight: 400;
+    line-height: 170%;
 }
 
 
-.heading--tertiary {
+.heading-tertiary {
     text-align: center;
     text-transform: uppercase;
     text-transform: none;
@@ -41,7 +42,7 @@ header {
     font-weight: 300;
     font-size: 24px;
     text-align: center;
-    line-height: 1.5;
+    line-height: 170%;
 }
 
 a {
@@ -51,5 +52,8 @@ a {
     &:link {
         //TODO:fix click color
         text-decoration: none;
+        color: $color-dark;
+
     }
 }
+

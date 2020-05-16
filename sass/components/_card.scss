@@ -1,6 +1,13 @@
 .card {
+    text-align: center;
     background-color: #fff;
-    padding: 35px;
-    flex-basis:33.3333%;
-    // margin:0 0 35p 35px;
+    margin: 0 0 35px 35px;
+    .data {
+        &>* {
+            display:block;
+            margin-bottom:10px;
+        }
+    }
+
 }
+

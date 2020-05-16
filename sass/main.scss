@@ -1,11 +1,13 @@
  @import "abstracts/variables";
 // @import "abstracts/mixins";
-// @import "base/base";
+//@import "base/base";
 // @import "components/card";
 // // @import "components/navigation";
  @import "base/typography";
  @import "components/button";
-// @import "layout/header";
+ @import "components/card";
+ @import "layout/header";
+ @import "layout/content";
 // @import "pages/home";
 
 * {
@@ -14,113 +16,58 @@
     box-sizing: 0;
 }
 
-.header-main {
-    display: flex;
-    background-color: #F4F7F6;
-
-    .menu-navigation {
-        flex-basis: 5%;
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        .icon-svg {
-            max-width: 20px;
-            //TODO: insert icon mixin
-            padding: 5px;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        &__name {
-            padding: 5px 10px;
-        }
-    }
-
-    .search {
-        min-width: auto;
-        flex-basis: 3%;
-        flex-grow: 0;
-        display: flex;
-
-        .icon-svg {
-            max-width: 20px;
-        }
-    }
-
-    .logo {
-        flex-grow: 1;
-        position: relative;
-        .icon-svg {
-            position: absolute;
-            top: 70px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-
-    .register {
-        padding: 0 20px;
-        flex-basis: 7%;
-        justify-self: flex-end;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &__feature {}
-    }
-
-    .submit {
-        flex-basis: 7%;
-        justify-self: flex-end;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #47BFB0;
-        //TODO: insert button here as a component as a second class i used
-    }
-
-}
-
-.content {
-    .block {
-        .inner {
-            //TODO:put these in  layout
-        }
-    }
+#content {
+    background-color:$color-grey-light;
 
     .box-main-heading {
+        max-width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items:center;
+    
         .heading-primary {
             //TODO:typography
+            background-color: red;
+            padding-bottom: 25px;
         }
 
         .heading-secondary {
             //TODO:typography
-        }
-    }
-
-    .grid {
-
-        //TODO:put these in  layout gisplay flex
-        .col3 {
-            //TODO:put these in  layout
+            background-color: red;
+            max-width:1000px;
+            padding-bottom: 30px;
         }
     }
 
     .subscription {
+        background-color: pink;
+
         &-option {
-            .data {
+            width:100%;
+            .data {  
+                margin: 30px 0;
+                //TODO: to card
+                .name {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
 
-                .name {}
+                .where {
+                    font-size: 18px;
+                    text-transform: none;
+                    font-weight: 300;
+                }
 
-                .where {}
+                .amount {
+                    font-size: 70px;
+                    font-weight: 900;
+                }
 
-                .amount {}
-
-                .currency {}
+                .currency {
+                    font-weight: 300;
+                    font-style: italic;
+                }
             }
 
             .button-wide {

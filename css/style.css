@@ -10,19 +10,20 @@ header {
   header .navigation__menu {
     font-weight: 400; }
 
-.heading--primary {
+.heading-primary {
   text-align: center;
   text-transform: uppercase;
   font-size: 32px;
   font-weight: 700; }
 
-.heading--secondary {
+.heading-secondary {
   text-align: center;
-  text-transform: uppercase;
+  text-transform: none;
   font-size: 16px;
-  font-weight: 400; }
+  font-weight: 400;
+  line-height: 170%; }
 
-.heading--tertiary {
+.heading-tertiary {
   text-align: center;
   text-transform: uppercase;
   text-transform: none;
@@ -32,28 +33,35 @@ header {
   font-weight: 300;
   font-size: 24px;
   text-align: center;
-  line-height: 1.5; }
+  line-height: 170%; }
 
 a {
   text-decoration: none; }
   a:active, a:visited, a:link {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #202121; }
 
 .button {
   background-color: #47BFB0;
   padding: 5px 20px;
-  transition: all ease .1s; }
+  transition: all ease .1s;
+  cursor: pointer; }
   .button:hover {
     background-color: #42AB9E; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: 0; }
+.card {
+  text-align: center;
+  background-color: #fff;
+  margin: 0 0 35px 35px; }
+  .card .data > * {
+    display: block;
+    margin-bottom: 10px; }
 
 .header-main {
+  max-height: 70px;
   display: flex;
-  background-color: #F4F7F6; }
+  background-color: #F4F7F6;
+  border-bottom: 1px solid #dfdfe1; }
   .header-main .menu-navigation {
     flex-basis: 5%;
     padding: 0 20px;
@@ -66,12 +74,14 @@ a {
       .header-main .menu-navigation .icon-svg:hover {
         cursor: pointer; }
     .header-main .menu-navigation__name {
-      padding: 5px 10px; }
+      padding: 5px 10px;
+      border-right: 1px solid #dfdfe1; }
   .header-main .search {
     min-width: auto;
     flex-basis: 3%;
     flex-grow: 0;
-    display: flex; }
+    display: flex;
+    cursor: pointer; }
     .header-main .search .icon-svg {
       max-width: 20px; }
   .header-main .logo {
@@ -79,9 +89,9 @@ a {
     position: relative; }
     .header-main .logo .icon-svg {
       position: absolute;
-      top: 70px;
+      top: 25px;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translateX(-50%); }
   .header-main .register {
     padding: 0 20px;
     flex-basis: 7%;
@@ -97,5 +107,57 @@ a {
     justify-content: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #47BFB0; }
+    justify-content: center; }
+
+.block {
+  padding: 50px 0; }
+
+.inner {
+  max-width: 1430px;
+  margin: 0 auto; }
+
+.grid {
+  display: flex; }
+  .grid .col-3 {
+    flex-basis: 33.3333%;
+    display: flex; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0; }
+
+#content {
+  background-color: #f4f7f6; }
+  #content .box-main-heading {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; }
+    #content .box-main-heading .heading-primary {
+      background-color: red;
+      padding-bottom: 25px; }
+    #content .box-main-heading .heading-secondary {
+      background-color: red;
+      max-width: 1000px;
+      padding-bottom: 30px; }
+  #content .subscription {
+    background-color: pink; }
+    #content .subscription-option {
+      width: 100%; }
+      #content .subscription-option .data {
+        margin: 30px 0; }
+        #content .subscription-option .data .name {
+          font-size: 18px;
+          font-weight: bold; }
+        #content .subscription-option .data .where {
+          font-size: 18px;
+          text-transform: none;
+          font-weight: 300; }
+        #content .subscription-option .data .amount {
+          font-size: 70px;
+          font-weight: 900; }
+        #content .subscription-option .data .currency {
+          font-weight: 300;
+          font-style: italic; }
