@@ -19,7 +19,7 @@ header {
 .heading-secondary {
   text-align: center;
   text-transform: none;
-  font-size: 16px;
+  font-size: 19px;
   font-weight: 400;
   line-height: 170%; }
 
@@ -27,6 +27,21 @@ header {
   text-align: center;
   text-transform: uppercase;
   text-transform: none;
+  font-weight: 300; }
+
+.heading-4 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #f4f7f6;
+  font-weight: 700; }
+
+.heading-5 {
+  color: #f4f7f6;
+  margin-bottom: 5px;
+  font-size: 17px;
   font-weight: 300; }
 
 .paragraph {
@@ -42,7 +57,9 @@ a {
     color: #202121; }
 
 .button {
-  background-color: #47BFB0;
+  color: #f4f7f6;
+  background-color: #49c5b6;
+  color: #f4f7f6;
   padding: 5px 20px;
   transition: all ease .1s;
   cursor: pointer; }
@@ -50,12 +67,31 @@ a {
     background-color: #42AB9E; }
 
 .card {
+  width: 100%;
   text-align: center;
   background-color: #fff;
-  margin: 0 0 35px 35px; }
+  padding: 35px;
+  margin-bottom: 35px; }
+  .card:first-child {
+    margin: 0 0 35px 35px; }
+  .card:last-child {
+    margin-right: 35px; }
   .card .data > * {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 15px; }
+  .card p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 170%;
+    text-align: left; }
+    .card p span {
+      font-weight: 700; }
+  .card ul {
+    text-align: left;
+    width: 50%; }
+    .card ul li {
+      text-align: left;
+      line-height: 200%; }
 
 .header-main {
   max-height: 70px;
@@ -117,9 +153,11 @@ a {
   margin: 0 auto; }
 
 .grid {
-  display: flex; }
+  display: flex;
+  justify-items: center; }
   .grid .col-3 {
     flex-basis: 33.3333%;
+    justify-items: center;
     display: flex; }
 
 * {
@@ -136,28 +174,34 @@ a {
     justify-items: center;
     align-items: center; }
     #content .box-main-heading .heading-primary {
-      background-color: red;
       padding-bottom: 25px; }
     #content .box-main-heading .heading-secondary {
-      background-color: red;
       max-width: 1000px;
       padding-bottom: 30px; }
-  #content .subscription {
-    background-color: pink; }
-    #content .subscription-option {
-      width: 100%; }
-      #content .subscription-option .data {
-        margin: 30px 0; }
-        #content .subscription-option .data .name {
-          font-size: 18px;
-          font-weight: bold; }
-        #content .subscription-option .data .where {
-          font-size: 18px;
-          text-transform: none;
-          font-weight: 300; }
-        #content .subscription-option .data .amount {
-          font-size: 70px;
-          font-weight: 900; }
-        #content .subscription-option .data .currency {
-          font-weight: 300;
-          font-style: italic; }
+  #content .subscription-option .data .name {
+    font-size: 18px;
+    font-weight: bold; }
+  #content .subscription-option .data .where {
+    font-size: 18px;
+    text-transform: none;
+    font-weight: 300; }
+  #content .subscription-option .data .amount {
+    font-size: 70px;
+    font-weight: 900; }
+  #content .subscription-option .data .currency {
+    font-weight: 300;
+    font-style: italic; }
+  #content .subscription-quote {
+    background-image: url(https://assets.awwwards.com/assets/images/pages/plans/quote/awwwards-01.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+    #content .subscription-quote h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 80px;
+      height: 4px;
+      transform: translateX(-50%);
+      background-color: #fff; }

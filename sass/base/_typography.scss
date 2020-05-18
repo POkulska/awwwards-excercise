@@ -25,7 +25,7 @@ header {
 .heading-secondary {
     text-align: center;
     text-transform: none;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 400;
     line-height: 170%;
 }
@@ -38,6 +38,24 @@ header {
     font-weight: 300;
 }
 
+.heading-4 {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: $color-grey-light;
+    font-weight: 700;
+}
+
+.heading-5 {
+    color: $color-grey-light;
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: 300;
+
+}
+
 .paragraph {
     font-weight: 300;
     font-size: 24px;
@@ -47,6 +65,7 @@ header {
 
 a {
     text-decoration: none;
+
     &:active,
     &:visited,
     &:link {
@@ -56,4 +75,3 @@ a {
 
     }
 }
-

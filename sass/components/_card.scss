@@ -1,13 +1,44 @@
 .card {
+    width:100%;
     text-align: center;
     background-color: #fff;
-    margin: 0 0 35px 35px;
+    padding: 35px;
+    margin-bottom:35px;
+    //margin: 0 0 35px 35px;
+
+    &:first-child {
+        margin: 0 0 35px 35px;
+    }
+
+    &:last-child {
+        margin-right: 35px;
+    }
+
     .data {
         &>* {
-            display:block;
-            margin-bottom:10px;
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: 25px;
+        line-height: 170%;
+        text-align: left;
+        span {
+            font-weight: 700;
+        }
+    }
+
+    ul {
+    text-align: left;
+    width:50%;
+    // list-style: armenian;    
+        li {
+            text-align: left;
+            line-height: 200%;
         }
     }
 
 }
-

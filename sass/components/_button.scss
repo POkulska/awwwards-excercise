@@ -1,12 +1,15 @@
 .button {
+    //TODO:change text color style because it doesnt work
+    color:$color-grey-light;
     //TODO:insert it to button as a component and make a proper hover effect
-    background-color: #47BFB0;
+    background-color: $color-primary-light;
+    color:$color-grey-light;
     padding: 5px 20px;
     transition: all ease .1s;
     cursor:pointer;
 
     &:hover {
-        background-color: #42AB9E;
+        background-color: $color-primary-dark;
     }
 
     // button-narrow {

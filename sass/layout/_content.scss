@@ -8,9 +8,11 @@
 
 .grid {
     display: flex;
+    justify-items: center;
     .col-3 {
         //TODO:finish grid
     flex-basis:33.3333%;
+    justify-items: center;
 
     display:flex;
     //flex-direction: column;
