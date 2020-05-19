@@ -1,23 +1,20 @@
 .card {
     width:100%;
     text-align: center;
-    background-color: #fff;
+    background-color: $color-white;
     padding: 35px;
-    margin-bottom:35px;
-    //margin: 0 0 35px 35px;
-
-    &:first-child {
-        margin: 0 0 35px 35px;
-    }
-
-    &:last-child {
-        margin-right: 35px;
-    }
+    margin:0 0 35px 35px;
 
     .data {
-        &>* {
+        span {
             display: block;
             margin-bottom: 15px;
+        }
+        .submit-2 {
+            display:flex;
+            align-items: center;
+            font-weight: 700;
+            //TODO:work on it and the button
         }
     }
 
@@ -31,14 +28,24 @@
         }
     }
 
-    ul {
-    text-align: left;
-    width:50%;
-    // list-style: armenian;    
+    .checked-features {
+        padding-left:35px;
+        text-align: left;
+        list-style: none;
+       //min-width: 250px;
         li {
             text-align: left;
             line-height: 200%;
+            &::before {
+                content: '';
+                margin-right: 10px;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background: url('../../img/tick-icon.svg');
+                background-size: cover;
+
+            }
         }
     }
-
 }

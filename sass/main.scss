@@ -37,11 +37,8 @@
     }
 
     .subscription {
-        //background-color: pink;
-        //TODO:podzialac z tymi marginami by bylo jak oryginal
-
-        &-option {
-           // width:100%;
+        margin: 0 35px 0 35px;
+        .card {
             .data {  
                 //margin: 30px 0;
                 //TODO: to card
@@ -65,18 +62,17 @@
                     font-style: italic;
                 }
             }
-
-            .button-wide {
-                //add in components
-            }
         }
 
-        &-quote {
+        .quote {
             background-image: url(https://assets.awwwards.com/assets/images/pages/plans/quote/awwwards-01.jpg);
-            //width: 409px;
-            display:flex;
+            width: 409px;
+            background-size: cover ;
+            display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            padding:35px;
+            margin: 0 35px 35px 35px;
             
             h4::after {
                 content: '';
@@ -88,9 +84,21 @@
                 transform: translateX(-50%);
                 background-color: #fff;
             }
+            
+            span {
+                a {
+                    color: $color-primary-text;
+                    font-weight: 700;
+                }
+            }
 
         }
     }
+
+
+
+
+
 
     .box-gallery {
         .item {

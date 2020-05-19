@@ -1,5 +1,5 @@
 .header-main {
-    max-height: 70px;
+    height: 70px;
     display: flex;
     background-color: #F4F7F6;
     border-bottom: 1px solid $color-grey-dark;
@@ -42,11 +42,7 @@
     }
 
     .logo {
-
-        //TODO:wyrownac logo do centrum
         flex-grow: 1;
-        position: relative;
-
         .icon-svg {
             position: absolute;
             top: 25px;
@@ -69,12 +65,5 @@
     .submit {
         flex-basis: 7%;
         justify-self: flex-end;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        //TODO: insert button here as a component as a second class i used
     }
 }

@@ -13,8 +13,8 @@ header {
 .heading-primary {
   text-align: center;
   text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 700; }
+  font-size: 36px;
+  font-weight: 900; }
 
 .heading-secondary {
   text-align: center;
@@ -54,31 +54,37 @@ a {
   text-decoration: none; }
   a:active, a:visited, a:link {
     text-decoration: none;
-    color: #202121; }
+    font-weight: inherit;
+    color: inherit; }
 
 .button {
-  color: #f4f7f6;
   background-color: #49c5b6;
   color: #f4f7f6;
-  padding: 5px 20px;
+  text-transform: uppercase;
+  padding: 0 20px;
   transition: all ease .1s;
-  cursor: pointer; }
+  cursor: pointer;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .button:hover {
-    background-color: #42AB9E; }
+    background-color: #42AB9E;
+    color: #f4f7f6; }
 
 .card {
   width: 100%;
   text-align: center;
   background-color: #fff;
   padding: 35px;
-  margin-bottom: 35px; }
-  .card:first-child {
-    margin: 0 0 35px 35px; }
-  .card:last-child {
-    margin-right: 35px; }
-  .card .data > * {
+  margin: 0 0 35px 35px; }
+  .card .data span {
     display: block;
     margin-bottom: 15px; }
+  .card .data .submit-2 {
+    display: flex;
+    align-items: center;
+    font-weight: 700; }
   .card p {
     font-size: 14px;
     margin-bottom: 25px;
@@ -86,15 +92,24 @@ a {
     text-align: left; }
     .card p span {
       font-weight: 700; }
-  .card ul {
+  .card .checked-features {
+    padding-left: 35px;
     text-align: left;
-    width: 50%; }
-    .card ul li {
+    list-style: none; }
+    .card .checked-features li {
       text-align: left;
       line-height: 200%; }
+      .card .checked-features li::before {
+        content: '';
+        margin-right: 10px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url("../../img/tick-icon.svg");
+        background-size: cover; }
 
 .header-main {
-  max-height: 70px;
+  height: 70px;
   display: flex;
   background-color: #F4F7F6;
   border-bottom: 1px solid #dfdfe1; }
@@ -121,8 +136,7 @@ a {
     .header-main .search .icon-svg {
       max-width: 20px; }
   .header-main .logo {
-    flex-grow: 1;
-    position: relative; }
+    flex-grow: 1; }
     .header-main .logo .icon-svg {
       position: absolute;
       top: 25px;
@@ -137,13 +151,7 @@ a {
     justify-content: center; }
   .header-main .submit {
     flex-basis: 7%;
-    justify-self: flex-end;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+    justify-self: flex-end; }
 
 .block {
   padding: 50px 0; }
@@ -152,13 +160,12 @@ a {
   max-width: 1430px;
   margin: 0 auto; }
 
-.grid {
+.box {
   display: flex;
   justify-items: center; }
-  .grid .col-3 {
+  .box .col-3 {
     flex-basis: 33.3333%;
-    justify-items: center;
-    display: flex; }
+    justify-items: center; }
 
 * {
   margin: 0;
@@ -178,30 +185,39 @@ a {
     #content .box-main-heading .heading-secondary {
       max-width: 1000px;
       padding-bottom: 30px; }
-  #content .subscription-option .data .name {
-    font-size: 18px;
-    font-weight: bold; }
-  #content .subscription-option .data .where {
-    font-size: 18px;
-    text-transform: none;
-    font-weight: 300; }
-  #content .subscription-option .data .amount {
-    font-size: 70px;
-    font-weight: 900; }
-  #content .subscription-option .data .currency {
-    font-weight: 300;
-    font-style: italic; }
-  #content .subscription-quote {
-    background-image: url(https://assets.awwwards.com/assets/images/pages/plans/quote/awwwards-01.jpg);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; }
-    #content .subscription-quote h4::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 80px;
-      height: 4px;
-      transform: translateX(-50%);
-      background-color: #fff; }
+  #content .subscription {
+    margin: 0 35px 0 35px; }
+    #content .subscription .card .data .name {
+      font-size: 18px;
+      font-weight: bold; }
+    #content .subscription .card .data .where {
+      font-size: 18px;
+      text-transform: none;
+      font-weight: 300; }
+    #content .subscription .card .data .amount {
+      font-size: 70px;
+      font-weight: 900; }
+    #content .subscription .card .data .currency {
+      font-weight: 300;
+      font-style: italic; }
+    #content .subscription .quote {
+      background-image: url(https://assets.awwwards.com/assets/images/pages/plans/quote/awwwards-01.jpg);
+      width: 409px;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 35px;
+      margin: 0 35px 35px 35px; }
+      #content .subscription .quote h4::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 80px;
+        height: 4px;
+        transform: translateX(-50%);
+        background-color: #fff; }
+      #content .subscription .quote span a {
+        color: #49c5b6;
+        font-weight: 700; }
