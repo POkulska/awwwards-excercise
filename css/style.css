@@ -16,12 +16,15 @@ header {
   font-size: 36px;
   font-weight: 900; }
 
-.heading-secondary {
-  text-align: center;
+.heading-secondary, .headline {
+  text-align: inherit;
   text-transform: none;
   font-size: 19px;
   font-weight: 400;
-  line-height: 170%; }
+  line-height: 170%;
+  padding-bottom: 15px; }
+  .heading-secondary-bold, .headline-bold {
+    font-weight: 700; }
 
 .heading-tertiary {
   text-align: center;
@@ -50,9 +53,21 @@ header {
   text-align: center;
   line-height: 170%; }
 
-a {
+.link {
   text-decoration: none; }
-  a:active, a:visited, a:link {
+  .link-footer-bold {
+    color: #202121;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 200%;
+    text-decoration: none; }
+  .link-footer-thin {
+    color: #202121;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 200%;
+    text-decoration: none; }
+  .link:active, .link:visited, .link:link {
     text-decoration: none;
     font-weight: inherit;
     color: inherit; }
@@ -179,7 +194,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
     #content .box-main-heading .heading-primary {
       padding-bottom: 25px; }
     #content .box-main-heading .heading-secondary {
@@ -202,6 +218,7 @@ a {
       font-style: italic; }
     #content .subscription .quote {
       background-image: url(https://assets.awwwards.com/assets/images/pages/plans/quote/awwwards-01.jpg);
+      background-position: center;
       width: 409px;
       background-size: cover;
       display: flex;
@@ -221,3 +238,55 @@ a {
       #content .subscription .quote span a {
         color: #49c5b6;
         font-weight: 700; }
+  #content .box-gallery {
+    background-color: #202121;
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden; }
+    #content .box-gallery .item figure img {
+      width: 80%; }
+
+#footer {
+  background-color: #fcfcfc;
+  padding: 0 50px; }
+  #footer .box-top,
+  #footer .box-bottom {
+    display: flex; }
+  #footer .box-left {
+    flex-grow: 1; }
+  #footer .box-top .box-left {
+    text-align: left; }
+    #footer .box-top .box-left .menu-footer {
+      display: flex;
+      padding-bottom: 10px; }
+      #footer .box-top .box-left .menu-footer li {
+        list-style: none;
+        padding: 0 15px; }
+        #footer .box-top .box-left .menu-footer li:first-child {
+          padding: 0 15px 0 0; }
+    #footer .box-top .box-left .follow a {
+      margin: 0 0 0 8px; }
+      #footer .box-top .box-left .follow a:first-child {
+        margin: 0; }
+  #footer .box-top .box-right .headline {
+    display: flex;
+    align-content: center; }
+    #footer .box-top .box-right .headline h2::after {
+      content: '';
+      margin: 0 15px -3px 15px;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background: url("../../img/calendar.svg");
+      background-size: cover; }
+  #footer .box-bottom {
+    border-top: 1px #dfdfe1 solid;
+    margin: 20px 0; }
+    #footer .box-bottom .box-left .menu-footer {
+      list-style: none;
+      display: flex; }
+      #footer .box-bottom .box-left .menu-footer li:not(:first-child) {
+        padding-left: 15px; }
