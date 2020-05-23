@@ -1,13 +1,13 @@
  @import "abstracts/variables";
  @import "abstracts/mixins";
- //@import "base/base";
- // @import "components/card";
- // // @import "components/navigation";
+ @import "base/base";
+ // @import "components/navigation";
  @import "base/typography";
  @import "components/button";
  @import "components/card";
  @import "layout/header";
  @import "layout/content";
+ @import "layout/footer";
  // @import "pages/home";
 
  * {
@@ -33,7 +33,7 @@
 
          .heading-secondary {
              max-width: 1000px;
-             padding-bottom: 30px;
+             padding-bottom: 50px;
          }
      }
 
@@ -42,9 +42,6 @@
 
          .card {
              .data {
-
-                 //margin: 30px 0;
-                 //TODO: to card
                  .name {
                      font-size: 18px;
                      font-weight: bold;
@@ -78,23 +75,18 @@
              justify-content: flex-end;
              padding: 35px;
              margin: 0 35px 35px 35px;
+             position: relative;
+             text-align: center;
 
              h4::after {
                  content: '';
                  position: absolute;
-                 bottom: 0;
+                 bottom: 16%;
                  left: 50%;
                  width: 80px;
                  height: 4px;
                  transform: translateX(-50%);
                  background-color: #fff;
-             }
-
-             span {
-                 a {
-                     color: $color-primary-text;
-                     font-weight: 700;
-                 }
              }
 
          }
@@ -116,96 +108,7 @@
                  }
 
              }
-
-             //.footer {}
-             //todo:hover effect animation
          }
      }
  }
 
- #footer {
-     background-color: $color-grey-ultralight;
-    padding: 0 50px;
-
-     .box-top,
-     .box-bottom {
-         display: flex;
-     }
-
-     .box-left {
-         flex-grow: 1;
-     }
-
-     .box-top {
-
-         .box-left {
-             text-align: left;
-
-             .menu-footer {
-                 display: flex;
-
-                 li {
-                     &:first-child {
-                         padding: 0 15px 0 0;
-                     }
-
-                     list-style: none;
-                     padding: 0 15px;
-                 }
-
-                 padding-bottom: 10px;
-             }
-
-             .follow {
-                 a {
-                     &:first-child {
-                         margin: 0;
-                     }
-
-                     margin: 0 0 0 8px;
-                 }
-             }
-         }
-
-         .box-right {
-             .headline {
-                 display: flex;
-                 align-content: center;
-
-                 h2::after {
-                     content: '';
-                     margin: 0 15px -3px 15px;
-                     display: inline-block;
-                     width: $dimension-icon;
-                     height: $dimension-icon;
-                     background: url('../../img/calendar.svg');
-                     background-size: cover;
-                 }
-
-             }
-         }
-
-     }
-
-     .box-bottom {
-         border-top: 1px $color-grey-dark solid;
-        //FIXME:fix the padding top or margin top on the box-bottom plus the border
-         margin: 20px 0;
-
-         .box-left {
-             .menu-footer {
-                list-style: none;
-                display: flex;
-                li:not(:first-child) {
-                    padding-left: 15px;
-                }
-             }
-         }
-
-         .box-right {
-             p {}
-         }
-     }
-
-
- }

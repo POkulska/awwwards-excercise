@@ -1,0 +1,101 @@
+#footer {
+    background-color: $color-grey-ultralight;
+
+    .box-top,
+    .box-bottom {
+        display: flex;
+
+    }
+
+    .box-left {
+        flex-grow: 1;
+        margin-left: 50px;
+    }
+
+    .box-right {
+        margin-right: 50px;
+    }
+    
+    .box-top {
+        .box-left {
+            text-align: left;
+            .menu-footer {
+                display: flex;
+                padding-bottom: 10px;
+                //position: relative;
+                li {
+                    &:first-child {
+                        padding: 0 15px 0 0;
+                    }
+                    list-style: none;
+                    padding: 0 15px;
+                }
+                .directory {
+                    &::after {
+                        content: '';
+                        width: 15px;
+                        height: 15px;
+                        background-color: red;
+                        //TODO: make these circles with data
+                    }
+                }
+            }
+
+            .follow {
+                a {
+                    &:first-child {
+                        margin: 0;
+                    }
+
+                    margin: 0 0 0 8px;
+                }
+            }
+        }
+
+        .box-right {
+            .headline {
+                display: flex;
+                align-content: center;
+
+                h2::after {
+                    content: '';
+                    margin: 0 15px -3px 15px;
+                    display: inline-block;
+                    width: $dimension-icon;
+                    height: $dimension-icon;
+                    background: url('../../img/calendar.svg');
+                    background-size: cover;
+                }
+
+                a {
+                    border-bottom: 1px $color-dark solid;
+                    transition: ease all .1s;
+
+                    a:hover {
+                        border-bottom: 1px $color-grey-dark solid;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .box-bottom {
+        border-top: 1px $color-grey-dark solid;
+        //FIXME:fix the padding top or margin top on the box-bottom plus the border
+        padding: 25px 0;
+        align-items: center;
+
+        .box-left {
+            .menu-footer {
+                list-style: none;
+                display: flex;
+
+                li:not(:first-child) {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}

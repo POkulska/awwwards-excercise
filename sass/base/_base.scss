@@ -24,15 +24,10 @@
 // }
 
 body {
-    //box-sizing: border-box;
-    //padding: 3rem;
-    // @include respond(tab-port) { //width<900?
-    //     padding: 0rem;
-    // }
+    cursor:crosshair;
 }
 
-
-// ::selection {
-//     background-color: $color-primary;
-//     color:$color-white;
-// }
+::selection {
+    background-color: $color-primary-dark;
+    color:$color-grey-ultralight;
+}

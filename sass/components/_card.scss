@@ -9,7 +9,13 @@
         span {
             display: block;
             margin-bottom: 15px;
+
+            &:last-of-type {
+                margin-bottom:20px;
+            }
         }
+
+
         .submit-2 {
             display:flex;
             align-items: center;
@@ -23,8 +29,8 @@
         margin-bottom: 25px;
         line-height: 170%;
         text-align: left;
-        span {
-            font-weight: 700;
+        &:first-of-type {
+            margin-top:20px;
         }
     }
 

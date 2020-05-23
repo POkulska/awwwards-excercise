@@ -22,21 +22,25 @@ header {
     font-weight: 900;
 }
 
-.heading-secondary, .headline {
-    //text-align: center;
-    text-align: inherit;
-
+.heading-secondary {
     text-transform: none;
     font-size: 19px;
     font-weight: 400;
     line-height: 170%;
-    padding-bottom:15px;
+    padding-bottom: 15px;
+
     &-bold {
-        font-weight:700;
+        font-weight: 700;
+
+        &:active,
+        &:visited,
+        &:link {
+            font-weight: 700;
+            text-decoration: none;
+            color: inherit;
+        }
     }
 }
-
-
 
 .heading-tertiary {
     text-align: center;
@@ -53,6 +57,7 @@ header {
     text-align: center;
     color: $color-grey-light;
     font-weight: 700;
+    line-height: 200%;
 }
 
 .heading-5 {
@@ -64,40 +69,69 @@ header {
 }
 
 .paragraph {
-    font-weight: 300;
-    font-size: 24px;
-    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
     line-height: 170%;
+    text-align: left;
+
+    &:first-of-type {
+        margin-top: 20px;
+    }
+
+    &-small {
+        font-size: 12px;
+        color: $color-grey-dark;
+    }
 }
 
 .link {
     text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    
+    &-small {
+        font-size: 12px;
+        &:active,
+        &:visited,
+        &:link {
+            font-weight: inherit;
+            color: inherit;
+        }
+    }
 
-
-    &-footer-bold {
-        color: #202121;
+    &-section-blue {
+        cursor: default;
         font-weight: 700;
-        font-size: 14px;
-        line-height: 200%;
-        text-decoration: none;
-
+        color: $color-primary-text;
+        transition: all ease 0.4s;
+        &:active,
+        &:visited,
+        &:link {
+            font-weight: 700;
+            color: $color-primary-text;
+        }
+        &:hover {
+            color: $color-dark-2;
+        }
     }
 
+
+    &-footer-bold,
     &-footer-thin {
-        color: #202121;
-        font-weight: 300;
-        font-size: 14px;
+        color: $color-dark;
         line-height: 200%;
-        text-decoration: none;
-
+        &:active,
+        &:visited,
+        &:link {
+            color: $color-dark;
+        }
+    }
+    &-footer-bold {
+        font-weight: 700;
+    }
+    &-footer-thin {
+        font-weight: 300;
     }
 
-    &:active,
-    &:visited,
-    &:link {
-        //TODO:fix click color
-        text-decoration: none;
-        font-weight: inherit;
-        color: inherit;
-    }
 }
+

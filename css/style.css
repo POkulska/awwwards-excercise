@@ -1,3 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body {
+  cursor: crosshair; }
+
+::selection {
+  background-color: #42AB9E;
+  color: #fcfcfc; }
+
 body {
   font-size: 12px;
   font-family: 'Roboto', sans-serif;
@@ -16,15 +30,18 @@ header {
   font-size: 36px;
   font-weight: 900; }
 
-.heading-secondary, .headline {
-  text-align: inherit;
+.heading-secondary {
   text-transform: none;
   font-size: 19px;
   font-weight: 400;
   line-height: 170%;
   padding-bottom: 15px; }
-  .heading-secondary-bold, .headline-bold {
+  .heading-secondary-bold {
     font-weight: 700; }
+    .heading-secondary-bold:active, .heading-secondary-bold:visited, .heading-secondary-bold:link {
+      font-weight: 700;
+      text-decoration: none;
+      color: inherit; }
 
 .heading-tertiary {
   text-align: center;
@@ -39,7 +56,8 @@ header {
   font-weight: bold;
   text-align: center;
   color: #f4f7f6;
-  font-weight: 700; }
+  font-weight: 700;
+  line-height: 200%; }
 
 .heading-5 {
   color: #f4f7f6;
@@ -48,29 +66,44 @@ header {
   font-weight: 300; }
 
 .paragraph {
-  font-weight: 300;
-  font-size: 24px;
-  text-align: center;
-  line-height: 170%; }
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 170%;
+  text-align: left; }
+  .paragraph:first-of-type {
+    margin-top: 20px; }
+  .paragraph-small {
+    font-size: 12px;
+    color: #dfdfe1; }
 
 .link {
-  text-decoration: none; }
-  .link-footer-bold {
-    color: #202121;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer; }
+  .link-small {
+    font-size: 12px; }
+    .link-small:active, .link-small:visited, .link-small:link {
+      font-weight: inherit;
+      color: inherit; }
+  .link-section-blue {
+    cursor: default;
     font-weight: 700;
-    font-size: 14px;
-    line-height: 200%;
-    text-decoration: none; }
-  .link-footer-thin {
+    color: #49c5b6;
+    transition: all ease 0.4s; }
+    .link-section-blue:active, .link-section-blue:visited, .link-section-blue:link {
+      font-weight: 700;
+      color: #49c5b6; }
+    .link-section-blue:hover {
+      color: #1b1c1c; }
+  .link-footer-bold, .link-footer-thin {
     color: #202121;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 200%;
-    text-decoration: none; }
-  .link:active, .link:visited, .link:link {
-    text-decoration: none;
-    font-weight: inherit;
-    color: inherit; }
+    line-height: 200%; }
+    .link-footer-bold:active, .link-footer-bold:visited, .link-footer-bold:link, .link-footer-thin:active, .link-footer-thin:visited, .link-footer-thin:link {
+      color: #202121; }
+  .link-footer-bold {
+    font-weight: 700; }
+  .link-footer-thin {
+    font-weight: 300; }
 
 .button {
   background-color: #49c5b6;
@@ -96,6 +129,8 @@ header {
   .card .data span {
     display: block;
     margin-bottom: 15px; }
+    .card .data span:last-of-type {
+      margin-bottom: 20px; }
   .card .data .submit-2 {
     display: flex;
     align-items: center;
@@ -105,8 +140,8 @@ header {
     margin-bottom: 25px;
     line-height: 170%;
     text-align: left; }
-    .card p span {
-      font-weight: 700; }
+    .card p:first-of-type {
+      margin-top: 20px; }
   .card .checked-features {
     padding-left: 35px;
     text-align: left;
@@ -133,16 +168,17 @@ header {
     padding: 0 20px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center; }
+    align-items: center;
+    border-right: 1px solid #dfdfe1; }
     .header-main .menu-navigation .icon-svg {
       max-width: 20px;
       padding: 5px; }
       .header-main .menu-navigation .icon-svg:hover {
         cursor: pointer; }
     .header-main .menu-navigation__name {
-      padding: 5px 10px;
-      border-right: 1px solid #dfdfe1; }
+      padding: 5px; }
   .header-main .search {
+    margin-left: 20px;
     min-width: auto;
     flex-basis: 3%;
     flex-grow: 0;
@@ -159,13 +195,13 @@ header {
       transform: translateX(-50%); }
   .header-main .register {
     padding: 0 20px;
-    flex-basis: 7%;
+    flex-basis: 9%;
     justify-self: flex-end;
     display: flex;
     align-items: center;
     justify-content: center; }
   .header-main .submit {
-    flex-basis: 7%;
+    flex-basis: 10%;
     justify-self: flex-end; }
 
 .block {
@@ -181,6 +217,61 @@ header {
   .box .col-3 {
     flex-basis: 33.3333%;
     justify-items: center; }
+
+#footer {
+  background-color: #fcfcfc; }
+  #footer .box-top,
+  #footer .box-bottom {
+    display: flex; }
+  #footer .box-left {
+    flex-grow: 1;
+    margin-left: 50px; }
+  #footer .box-right {
+    margin-right: 50px; }
+  #footer .box-top .box-left {
+    text-align: left; }
+    #footer .box-top .box-left .menu-footer {
+      display: flex;
+      padding-bottom: 10px; }
+      #footer .box-top .box-left .menu-footer li {
+        list-style: none;
+        padding: 0 15px; }
+        #footer .box-top .box-left .menu-footer li:first-child {
+          padding: 0 15px 0 0; }
+      #footer .box-top .box-left .menu-footer .directory::after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color: red; }
+    #footer .box-top .box-left .follow a {
+      margin: 0 0 0 8px; }
+      #footer .box-top .box-left .follow a:first-child {
+        margin: 0; }
+  #footer .box-top .box-right .headline {
+    display: flex;
+    align-content: center; }
+    #footer .box-top .box-right .headline h2::after {
+      content: '';
+      margin: 0 15px -3px 15px;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background: url("../../img/calendar.svg");
+      background-size: cover; }
+    #footer .box-top .box-right .headline a {
+      border-bottom: 1px #202121 solid;
+      transition: ease all .1s; }
+      #footer .box-top .box-right .headline a a:hover {
+        border-bottom: 1px #dfdfe1 solid; }
+  #footer .box-bottom {
+    border-top: 1px #dfdfe1 solid;
+    padding: 25px 0;
+    align-items: center; }
+    #footer .box-bottom .box-left .menu-footer {
+      list-style: none;
+      display: flex; }
+      #footer .box-bottom .box-left .menu-footer li:not(:first-child) {
+        padding-left: 15px; }
 
 * {
   margin: 0;
@@ -200,7 +291,7 @@ header {
       padding-bottom: 25px; }
     #content .box-main-heading .heading-secondary {
       max-width: 1000px;
-      padding-bottom: 30px; }
+      padding-bottom: 50px; }
   #content .subscription {
     margin: 0 35px 0 35px; }
     #content .subscription .card .data .name {
@@ -225,19 +316,18 @@ header {
       flex-direction: column;
       justify-content: flex-end;
       padding: 35px;
-      margin: 0 35px 35px 35px; }
+      margin: 0 35px 35px 35px;
+      position: relative;
+      text-align: center; }
       #content .subscription .quote h4::after {
         content: '';
         position: absolute;
-        bottom: 0;
+        bottom: 16%;
         left: 50%;
         width: 80px;
         height: 4px;
         transform: translateX(-50%);
         background-color: #fff; }
-      #content .subscription .quote span a {
-        color: #49c5b6;
-        font-weight: 700; }
   #content .box-gallery {
     background-color: #202121;
     width: 100vw;
@@ -248,45 +338,3 @@ header {
     overflow: hidden; }
     #content .box-gallery .item figure img {
       width: 80%; }
-
-#footer {
-  background-color: #fcfcfc;
-  padding: 0 50px; }
-  #footer .box-top,
-  #footer .box-bottom {
-    display: flex; }
-  #footer .box-left {
-    flex-grow: 1; }
-  #footer .box-top .box-left {
-    text-align: left; }
-    #footer .box-top .box-left .menu-footer {
-      display: flex;
-      padding-bottom: 10px; }
-      #footer .box-top .box-left .menu-footer li {
-        list-style: none;
-        padding: 0 15px; }
-        #footer .box-top .box-left .menu-footer li:first-child {
-          padding: 0 15px 0 0; }
-    #footer .box-top .box-left .follow a {
-      margin: 0 0 0 8px; }
-      #footer .box-top .box-left .follow a:first-child {
-        margin: 0; }
-  #footer .box-top .box-right .headline {
-    display: flex;
-    align-content: center; }
-    #footer .box-top .box-right .headline h2::after {
-      content: '';
-      margin: 0 15px -3px 15px;
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-      background: url("../../img/calendar.svg");
-      background-size: cover; }
-  #footer .box-bottom {
-    border-top: 1px #dfdfe1 solid;
-    margin: 20px 0; }
-    #footer .box-bottom .box-left .menu-footer {
-      list-style: none;
-      display: flex; }
-      #footer .box-bottom .box-left .menu-footer li:not(:first-child) {
-        padding-left: 15px; }

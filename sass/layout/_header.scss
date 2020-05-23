@@ -10,6 +10,8 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        border-right: 1px solid $color-grey-dark;
+
 
         .icon-svg {
             max-width: 20px;
@@ -22,13 +24,12 @@
         }
 
         &__name {
-            padding: 5px 10px;
-            //TODO:make border for full
-            border-right: 1px solid $color-grey-dark;
+            padding: 5px;
         }
     }
 
     .search {
+        margin-left: 20px;
         min-width: auto;
         flex-basis: 3%;
         flex-grow: 0;
@@ -53,17 +54,16 @@
 
     .register {
         padding: 0 20px;
-        flex-basis: 7%;
+        flex-basis: 9%;
         justify-self: flex-end;
         display: flex;
         align-items: center;
         justify-content: center;
-
         &__feature {}
     }
 
     .submit {
-        flex-basis: 7%;
+        flex-basis: 10%;
         justify-self: flex-end;
     }
 }
